@@ -1,0 +1,41 @@
+@use '@angular/material' as mat;
+@use 'themes/twilight';
+
+@include mat.core();
+
+@mixin app-theme($mode) {
+  @if $mode == 'light' {
+    @include mat.all-component-themes(twilight.$light-theme);
+    .mat-icon,
+    .mat-mdc-menu-item .mat-icon {
+      color: #7c7390;
+    }
+    svg {
+      fill: #7c7390;
+    }
+  }
+  @if ($mode == 'dark') {
+    @include mat.all-component-themes(twilight.$dark-theme);
+    background: #212121;
+
+    .mdc-switch:enabled:focus:active .mdc-switch__track::after,
+    .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after,
+    .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::after,
+    .mdc-switch__track::after {
+      background: #4a435e;
+    }
+
+    .mdc-switch--selected:enabled:focus:not(:active) .mdc-switch__handle::after {
+      background: #342c46;
+    }
+
+    .mat-icon,
+    .mat-mdc-menu-item .mat-icon {
+      color: #4a435e;
+    }
+
+    svg {
+      fill: #4a435e;
+    }
+  }
+}

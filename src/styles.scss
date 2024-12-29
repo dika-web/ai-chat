@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import 'app/scss/components';
+@import 'app/scss/custom-theme';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.theme-light {
+  @include app-theme('light');
+}
+
+.theme-dark {
+  @include app-theme('dark');
+}
+
+pre {
+  width: 100%;
+  background-color: rgb(74, 67, 94, 0.2);
+  padding: 16px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.markdown-clipboard-toolbar {
+  position: relative !important;
+}

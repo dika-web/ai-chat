@@ -1,0 +1,19 @@
+<div class="ai-user-profile">
+  <button matTooltip="User profile" class="ai-user-profile__button" mat-button [matMenuTriggerFor]="menu" [disableRipple]="true">
+    <mat-icon class="ai-user-profile__button-icon">account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>info</mat-icon>
+      <span>User info</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>settings</mat-icon>
+      <span>Setting</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</div>

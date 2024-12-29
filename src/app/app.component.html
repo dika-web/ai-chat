@@ -1,1 +1,6 @@
-<p>Chat AI</p>
+<div class="app-container">
+  <main class="main-container">
+    <ai-navigation [isDarkMode]="isDarkMode" (darkModeSwitched)="receiveThemeMode($event)" />
+    <ai-chat />
+  </main>
+</div>

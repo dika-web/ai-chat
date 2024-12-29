@@ -1,0 +1,20 @@
+<form class="ai-chat-form">
+  @for (message of messages(); track message.prompt) {
+    <div class="ai-chat-form__prompt">
+      {{ message.prompt }}
+    </div>
+    @if (message.response) {
+      <div class="ai-chat-form__response">
+        <ai-typing-markdown [prompt]="message.response" />
+      </div>
+    }
+  }
+  <mat-form-field class="ai-textfield">
+    <textarea [formControl]="promptMessage" (keydown.enter)="onEnter($event)" matInput [placeholder]="'Message chat'"></textarea>
+    <span class="ai-chat-form__action">
+      <button class="ai-button" mat-button [disabled]="promptMessage.invalid" (click)="sendRequest($event)">
+        <mat-icon>arrow_upward_alt</mat-icon>
+      </button>
+    </span>
+  </mat-form-field>
+</form>

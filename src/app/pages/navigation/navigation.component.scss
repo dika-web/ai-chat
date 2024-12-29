@@ -1,0 +1,23 @@
+:host {
+  width: 100%;
+}
+
+.ai-nav-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+}
+
+.ai-button {
+  ::ng-deep .mdc-switch__icon {
+    display: none;
+  }
+}

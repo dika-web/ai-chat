@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ai-textfield {
+  width: 100%;
+  border-radius: 16px;
+
+  .mdc-text-field--filled {
+    border-radius: 16px;
+  }
+
+  .mdc-line-ripple {
+    display: none;
+  }
+}

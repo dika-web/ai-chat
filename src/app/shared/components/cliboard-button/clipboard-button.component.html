@@ -1,0 +1,9 @@
+<div class="ai-clipboard-container">
+  <button mat-button (click)="onClick($event)">
+    <mat-icon>copy_all</mat-icon>
+    <div>Copy code</div>
+  </button>
+  @if (isCopied()) {
+    <mat-icon>check</mat-icon>
+  }
+</div>

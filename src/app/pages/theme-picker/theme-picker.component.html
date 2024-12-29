@@ -1,0 +1,21 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>format_color_fill</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  @for (theme of themes; track theme.name) {
+    <button mat-menu-item class="theme-picker__button" (click)="selectTheme(theme.name)">
+      <span>{{ theme.displayName }}</span>
+      <svg matMenuItemIcon width="50" height="50" viewBox="0 0 80 80">
+        <path
+          [attr.fill]="theme.bgColor"
+          d="M77.87 0C79.05 0 80 .95 80 2.13v75.74c0 1.17-.95 2.13-2.13 2.13H2.13C.96 80 0 79.04 0 77.87V2.13C0 .95.96 0 2.13 0h75.74z"
+        />
+        <path
+          [attr.fill]="theme.textColor"
+          d="M54 40c3.32 0 6 2.69 6 6 0 1.2 0-1.2 0 0 0 3.31-2.68 6-6 6H26c-3.31 0-6-2.69-6-6 0-1.2 0 1.2 0 0 0-3.31 2.69-6 6-6h28z"
+        />
+        <path [attr.fill]="theme.textColor" d="M0 0h80v17.24H0V0z" />
+      </svg>
+    </button>
+  }
+</mat-menu>

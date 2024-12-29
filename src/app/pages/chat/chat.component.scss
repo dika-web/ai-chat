@@ -1,0 +1,48 @@
+:host {
+  width: 50%;
+  z-index: 1;
+}
+
+.ai-chat-form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+}
+
+.ai-chat-form__prompt {
+  align-self: flex-end;
+  text-align: right;
+  border-radius: 16px;
+  padding: 16px;
+  background: #1d1a21;
+  color: white;
+  //width: fit-content
+}
+
+.ai-chat-form__response {
+  color: #e6e1e2;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.ai-textfield {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+
+  ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+}
+
+.ai-chat-form__action {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  .mat-mdc-button > .mat-icon {
+    margin: 0;
+  }
+}
