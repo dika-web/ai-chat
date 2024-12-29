@@ -1,12 +1,13 @@
 import {TestBed} from '@angular/core/testing';
-
 import {StorageService} from './storage.service';
 
 describe('StorageService', () => {
   let service: StorageService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers:[{provide: Storage, useValue: {}}]
+    });
     service = TestBed.inject(StorageService);
   });
 

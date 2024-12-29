@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {TypingMarkdownComponent} from './typing-markdown.component';
+import {MarkdownModule, MarkdownService} from 'ngx-markdown';
 
 describe('TypingMarkdownComponent', () => {
   let component: TypingMarkdownComponent;
@@ -8,7 +9,8 @@ describe('TypingMarkdownComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TypingMarkdownComponent]
+      imports: [TypingMarkdownComponent, MarkdownModule.forRoot()],
+      providers: [MarkdownService]
     }).compileComponents();
 
     fixture = TestBed.createComponent(TypingMarkdownComponent);

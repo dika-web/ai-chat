@@ -1,14 +1,15 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {NavigationComponent} from './navigation.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-describe('HeaderComponent', () => {
+describe('NavigationComponent', () => {
   let component: NavigationComponent;
   let fixture: ComponentFixture<NavigationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavigationComponent]
+      imports: [NavigationComponent, BrowserAnimationsModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(NavigationComponent);

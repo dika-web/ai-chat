@@ -1,6 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ChatComponent} from './chat.component';
+import {PromptService} from '../../core/services/gpt-service';
+import {provideHttpClient} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('PromptComponent', () => {
   let component: ChatComponent;
@@ -8,7 +11,8 @@ describe('PromptComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ChatComponent]
+      imports: [ChatComponent, BrowserAnimationsModule],
+      providers: [PromptService, provideHttpClient()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(ChatComponent);
