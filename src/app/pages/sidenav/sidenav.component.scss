@@ -1,4 +1,4 @@
-.sidenav-container {
+.smart-sidenav {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -6,10 +6,9 @@
   right: 0;
   z-index: unset;
   display: flex;
-  padding: 16px 16px 16px 0;
 }
 
-.sidenav-container__button {
+.smart-sidenav__content-button {
   display: flex;
   align-items: center;
 

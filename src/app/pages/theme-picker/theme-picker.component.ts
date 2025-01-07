@@ -5,7 +5,7 @@ import {MatIconButton} from '@angular/material/button';
 import {THEMES} from './constants';
 
 @Component({
-  selector: 'ai-theme-picker',
+  selector: 'smart-theme-picker',
   standalone: true,
   imports: [MatIcon, MatMenu, MatMenuItem, MatMenuTrigger, MatIconButton],
   templateUrl: './theme-picker.component.html',

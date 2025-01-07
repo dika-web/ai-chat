@@ -1,41 +1,105 @@
 @use '@angular/material' as mat;
 @use 'themes/twilight';
+@import "colours";
 
 @include mat.core();
 
-@mixin app-theme($mode) {
+@mixin default-theme($mode) {
   @if $mode == 'light' {
+    background: var(--mat-app-background-color);
+    color: var(--mat-app-text-color);
+
     @include mat.all-component-themes(twilight.$light-theme);
-    .mat-icon,
+    .mat-icon:not(.chat-form__icon),
     .mat-mdc-menu-item .mat-icon {
-      color: #7c7390;
+      color: $icon-light-color;
     }
+
     svg {
-      fill: #7c7390;
+      fill: $icon-light-color;
     }
+
+    .smart-chat__content-prompt {
+      background: $prompt-light-bg
+    }
+    .smart-textfield {
+      background:var(--mat-app-background-color)
+    }
+
+    .smart-chat__form-action {
+      .mdc-button:not(:disabled) {
+        background: $button-light-bg;
+        .chat-form__icon {
+          color: white;
+        }
+      }
+    }
+      .material-icons {
+        color: $button-light-bg
+      }
+
+    pre {
+      background: $pre-light-bg;
+      border: $pre-light-border;
+      opacity: 0.7;
+    }
+
+    .smart-code__title {
+      background:$prompt-light-bg;
+      border-bottom: white solid 0.01px;
+    }
+
   }
+
   @if ($mode == 'dark') {
     @include mat.all-component-themes(twilight.$dark-theme);
-    background: #212121;
+    background: var(--mat-app-background-color);
+    color: var(--mat-app-text-color);
 
+    .mdc-switch--selected .mdc-switch__icon {
+      fill: $icon-light-color;
+    }
     .mdc-switch:enabled:focus:active .mdc-switch__track::after,
     .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after,
     .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::after,
     .mdc-switch__track::after {
-      background: #4a435e;
+      background: $icon-dark-color;
     }
-
     .mdc-switch--selected:enabled:focus:not(:active) .mdc-switch__handle::after {
-      background: #342c46;
+      background: $button-dark-hover-bg;
     }
 
+    .material-icons,
     .mat-icon,
     .mat-mdc-menu-item .mat-icon {
-      color: #4a435e;
+      color: $icon-dark-color;
     }
 
     svg {
-      fill: #4a435e;
+      fill: $icon-dark-color;
     }
+
+    .smart-code__title {
+      background:  $button-dark-hover-bg;
+      color: $button-light-bg;
+    }
+    .smart-textfield {
+      background:var(--mat-app-background-color)
+    }
+
+    .smart-chat__content-prompt {
+      background: $prompt-dark-bg
+    }
+    .smart-chat__form-action {
+      .mdc-button:not(:disabled) {
+        background: $button-dark-bg;
+        .chat-form__icon {
+          color: #d2d1e6;
+        }
+      }
+    }
+      .material-icons {
+        color: $icon-dark-color
+      }
   }
 }

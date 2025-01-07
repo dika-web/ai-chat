@@ -4,4 +4,6 @@ export interface ChatInterface {
   projectId?: string;
   prompt: string;
   response: string;
+  isTyping?: boolean;
+  processed?: boolean;
 }

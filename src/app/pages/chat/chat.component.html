@@ -1,20 +1,21 @@
-<form class="ai-chat-form">
-  @for (message of messages(); track message.prompt) {
-    <div class="ai-chat-form__prompt">
-      {{ message.prompt }}
-    </div>
-    @if (message.response) {
-      <div class="ai-chat-form__response">
-        <ai-typing-markdown [prompt]="message.response" />
-      </div>
-    }
-  }
-  <mat-form-field class="ai-textfield">
-    <textarea [formControl]="promptMessage" (keydown.enter)="onEnter($event)" matInput [placeholder]="'Message chat'"></textarea>
-    <span class="ai-chat-form__action">
-      <button class="ai-button" mat-button [disabled]="promptMessage.invalid" (click)="sendRequest($event)">
-        <mat-icon>arrow_upward_alt</mat-icon>
+<div class="smart-chat" #scrollContainer (scroll)="onUserScroll($event)">
+  <div class="smart-chat__content">
+      @for (message of messages(); track $index) {
+        <div class="smart-chat__content-prompt">
+          {{ message.prompt }}
+        </div>
+        <div class="smart-chat__content-response">
+          <img class ="smart-chat__content-response-icon" src="/assets/logo.svg" alt="Icon" width="32" height="32" />
+          <markdown  clipboard [data]="message.response"> </markdown>
+        </div>
+      }
+  </div>
+  <mat-form-field class="smart-textfield">
+    <textarea [formControl]="promptMessage" (keydown.enter)="onEnter($event)"  matInput [placeholder]="'Message chat'"></textarea>
+    <span class="smart-chat__form-action">
+      <button mat-button [disabled]="promptMessage.invalid"  (click)="sendRequest($event)">
+        <mat-icon class="chat-form__icon">arrow_upward_alt</mat-icon>
       </button>
     </span>
   </mat-form-field>
-</form>
+</div>

@@ -5,7 +5,7 @@ import {MatIcon} from '@angular/material/icon';
 import {MatTooltip} from '@angular/material/tooltip';
 
 @Component({
-  selector: 'ai-user-profile',
+  selector: 'smart-user-profile',
   standalone: true,
   imports: [MatButton, MatIcon, MatMenu, MatMenuItem, MatMenuTrigger, MatTooltip],
   templateUrl: './user-profile.component.html',

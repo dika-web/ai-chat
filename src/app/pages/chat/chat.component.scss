@@ -1,48 +1,69 @@
-:host {
-  width: 50%;
-  z-index: 1;
+.smart-chat {
+  height: 90%;
+  overflow-y: auto;
 }
 
-.ai-chat-form {
+.smart-chat__content {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
   gap: 16px;
 }
 
-.ai-chat-form__prompt {
-  align-self: flex-end;
+.smart-chat__content-prompt {
   text-align: right;
+  align-self: flex-end;
   border-radius: 16px;
   padding: 16px;
-  background: #1d1a21;
-  color: white;
-  //width: fit-content
+  width: fit-content;
+  max-width: 70%;
 }
 
-.ai-chat-form__response {
-  color: #e6e1e2;
-  height: 100%;
-  padding: 0 16px;
+.smart-chat__content-response {
+  position: relative;
+  padding-left: 16px;
 }
 
-.ai-textfield {
+.smart-chat__content-response-icon {
+  position: absolute;
+  left: -32px;
+  opacity: 0.7;
+}
+
+.material-icons {
+  margin-right: 8px;
+}
+
+.smart-textfield {
   position: sticky;
   bottom: 0;
   z-index: 1;
+  width: 100%;
 
-  ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    margin: auto;
+    width: 50%;
+  }
+    ::ng-deep .mat-mdc-form-field-subscript-wrapper {
     display: none;
   }
 }
 
-.ai-chat-form__action {
+.smart-chat__form-action {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 
-  .mat-mdc-button > .mat-icon {
-    margin: 0;
+  .mat-mdc-button {
+    min-width: unset;
+    width: 40px;
+
+    .mat-icon {
+      margin: 0;
+      overflow: unset;
+    }
   }
 }

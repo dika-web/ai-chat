@@ -8,7 +8,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "prefix": "ai"
+          "prefix": "smart"
         }
       },
       "root": "",
@@ -24,9 +24,17 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "/public/"
+              }
             ],
-            "styles": ["src/styles.scss"],
-            "scripts": ["node_modules/clipboard/dist/clipboard.min.js"]
+            "styles": ["src/styles.scss", "node_modules/prismjs/themes/prism.css", "node_modules/prismjs/themes/prism-tomorrow.css"],
+            ],
+            "scripts": ["node_modules/clipboard/dist/clipboard.min.js",  "node_modules/prismjs/prism.js"]
           },
           "configurations": {
             "production": {

@@ -57,7 +57,7 @@ $_palettes: (
     90: #f6dce1,
     95: #ffecef,
     98: #fff8f8,
-    99: #fffbff,
+    99: #7c7390 ,
     100: #ffffff
   ),
   neutral: (
@@ -141,6 +141,9 @@ $light-theme: mat.define-theme(
       theme-type: light,
       primary: $_primary,
       tertiary: $_tertiary
+    ),
+    typography: (
+      brand-family: 'Roboto',
     )
   )
 );
@@ -150,6 +153,9 @@ $dark-theme: mat.define-theme(
       theme-type: dark,
       primary: $_primary,
       tertiary: $_tertiary
-    )
+    ),
+    typography: (
+      brand-family: 'Roboto',
+    ),
   )
 );

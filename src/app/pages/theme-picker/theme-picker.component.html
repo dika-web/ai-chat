@@ -3,7 +3,7 @@
 </button>
 <mat-menu #menu="matMenu">
   @for (theme of themes; track theme.name) {
-    <button mat-menu-item class="theme-picker__button" (click)="selectTheme(theme.name)">
+    <button mat-menu-item class="smart-theme-picker__button" (click)="selectTheme(theme.name)">
       <span>{{ theme.displayName }}</span>
       <svg matMenuItemIcon width="50" height="50" viewBox="0 0 80 80">
         <path

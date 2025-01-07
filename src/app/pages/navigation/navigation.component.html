@@ -1,11 +1,11 @@
-<mat-toolbar class="ai-nav-container">
-  <ai-sidenav />
-  <div class="theme-toggle-container">
-    <mat-icon class="theme-toggle__icon" [ngClass]="{'is-dark-mode': isDarkMode()}"
-      >{{ isDarkMode() ? 'dark_mode' : 'light_mode' }}
+<mat-toolbar class="smart-nav__container">
+<!--  <smart-sidenav />-->
+  <div class="smart-nav__theme-toggle">
+    <mat-icon>
+      {{ isDarkMode() ? 'dark_mode' : 'light_mode' }}
     </mat-icon>
     <mat-slide-toggle matTooltip="Switch theme mode" [checked]="isDarkMode()" (change)="darkModeSwitched.emit($event.checked)">
     </mat-slide-toggle>
   </div>
-  <ai-user-profile />
+  <smart-user-profile />
 </mat-toolbar>

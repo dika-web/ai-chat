@@ -5,7 +5,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTooltip} from '@angular/material/tooltip';
 
 @Component({
-  selector: 'ai-sidenav',
+  selector: 'smart-sidenav',
   standalone: true,
   imports: [MatSidenavModule, MatButtonModule, MatIconModule, MatTooltip],
   templateUrl: './sidenav.component.html',

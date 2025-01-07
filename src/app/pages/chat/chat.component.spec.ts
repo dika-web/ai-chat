@@ -1,11 +1,11 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ChatComponent} from './chat.component';
-import {PromptService} from '../../core/services/gpt-service';
+import {PromptService} from '../../core/services/prompts';
 import {provideHttpClient} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-describe('PromptComponent', () => {
+describe('ChatComponent', () => {
   let component: ChatComponent;
   let fixture: ComponentFixture<ChatComponent>;
 

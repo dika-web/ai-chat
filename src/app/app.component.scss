@@ -1,16 +1,4 @@
-.app-container {
-  display: flex;
-  text-align: center;
-  width: 100%;
-  overflow-y: auto;
-}
-
-.main-container {
+.smart-chat__root {
   height: 100vh;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  overflow: hidden;
 }

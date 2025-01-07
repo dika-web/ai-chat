@@ -1,6 +1,4 @@
-<div class="app-container">
-  <main class="main-container">
-    <ai-navigation [isDarkMode]="isDarkMode" (darkModeSwitched)="receiveThemeMode($event)" />
-    <ai-chat />
-  </main>
+<div class="smart-chat__root">
+  <smart-navigation [isDarkMode]="isDarkMode" (darkModeSwitched)="receiveThemeMode($event)" />
+  <smart-chat />
 </div>

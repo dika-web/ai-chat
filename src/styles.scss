@@ -3,31 +3,59 @@
 @import 'app/scss/components';
 @import 'app/scss/custom-theme';
 
+mat.$theme-ignore-duplication-warnings: true;
+
 * {
   box-sizing: border-box;
 }
 
-html,
+html {
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.4;
+}
+
 body {
-  height: 100%;
+  overflow: hidden;
 }
 
 .theme-light {
-  @include app-theme('light');
+  @include default-theme('light');
 }
 
 .theme-dark {
-  @include app-theme('dark');
+  @include default-theme('dark');
 }
 
 pre {
+  display: flex;
   width: 100%;
-  background-color: rgb(74, 67, 94, 0.2);
+  background-color: rgb(74, 67, 94, 0.5);
   padding: 16px;
-  border-radius: 8px;
-  overflow: auto;
+  border-radius: 0 0 8px 8px;
+  overflow-x: auto;
 }
 
 .markdown-clipboard-toolbar {
   position: relative !important;
 }
+
+code[class*=language-] {
+  text-shadow: none !important;
+}
+
+.smart-code__title {
+  padding: 8px 16px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: -8px;
+}
+
+.smart-code__title + div {
+  margin-bottom: 16px;
+}
+
+.smart-chat {
+  p {
+    margin-top: 0;
+  }
+}
+
