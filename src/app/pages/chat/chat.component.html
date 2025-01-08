@@ -1,4 +1,4 @@
-<div class="smart-chat" #scrollContainer (scroll)="onUserScroll($event)">
+<div class="smart-chat" #scrollContainer (scroll)="onUserScroll()">
   <div class="smart-chat__content">
       @for (message of messages(); track $index) {
         <div class="smart-chat__content-prompt">

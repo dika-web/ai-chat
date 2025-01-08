@@ -3,7 +3,7 @@ import {MatButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 
 @Component({
-  selector: 'ai-clipboard-button',
+  selector: 'smart-clipboard-button',
   standalone: true,
   imports: [MatButton, MatIcon],
   templateUrl: './clipboard-button.component.html',

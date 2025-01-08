@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {ChatInterface} from '../../models';
 import {CommonService} from '../common';
-import {WebSocketSubject} from "rxjs/internal/observable/dom/WebSocketSubject";
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +19,6 @@ export class PromptService extends CommonService {
   }
 
 
-
-
   createStream(payload: {id: string; userId: string; prompt: string, projectId:string}): Observable<string> {
     return new Observable((observer) => {
       this.stream.onmessage = (event) => {
@@ -36,7 +33,7 @@ export class PromptService extends CommonService {
         }
       };
 
-      this.stream.onerror = (error) => {
+      this.stream.onerror = () => {
         observer.error('WebSocket error');
       };
 

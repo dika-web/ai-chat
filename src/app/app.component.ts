@@ -9,7 +9,7 @@ import {LocalStorageService} from './shared/services/storage';
 import {ACTIVE_THEME_KEY} from './shared/constants/constants';
 import {DOCUMENT} from '@angular/common';
 import {ChatComponent} from './pages/chat/chat.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from '@angular/forms';
 import './shared/prism-lang'
 
 enum Themes {

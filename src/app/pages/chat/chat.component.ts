@@ -16,9 +16,9 @@ import {v4 as uuidv4} from 'uuid';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {ChatInterface} from '../../core/models';
 import {PromptService} from '../../core/services/prompts';
-import {MarkdownComponent, MARKED_OPTIONS, provideMarkdown} from "ngx-markdown";
+import {MarkdownComponent, MARKED_OPTIONS, provideMarkdown} from 'ngx-markdown';
 import {markedOptionsFactory} from '../../shared/utils';
-import {CommonModule} from "@angular/common";
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'smart-chat',
@@ -64,7 +64,7 @@ export class ChatComponent implements AfterViewChecked {
     formContainer.scrollTo({top: formContainer.scrollHeight - 100, behavior: 'smooth'});
   }
 
-  onUserScroll(event: Event): void {
+  onUserScroll(): void {
     this.isAutoScrollAllowed = false
   }
 
