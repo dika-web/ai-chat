@@ -57,5 +57,8 @@ code[class*=language-] {
   p {
     margin-top: 0;
   }
+  .token.operator {
+    background: none;
+  }
 }
 

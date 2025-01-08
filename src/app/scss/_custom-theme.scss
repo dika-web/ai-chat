@@ -39,11 +39,12 @@
       }
 
     pre {
-      background: $pre-light-bg;
       border: $pre-light-border;
-      opacity: 0.7;
     }
 
+    pre[class*=language-] {
+      background: white;
+    }
     .smart-code__title {
       background:$prompt-light-bg;
       border-bottom: white solid 0.01px;
@@ -80,7 +81,7 @@
     }
 
     .smart-code__title {
-      background:  $button-dark-hover-bg;
+      background: #3e394c;
       color: $button-light-bg;
     }
     .smart-textfield {
